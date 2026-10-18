@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy policy - Pilpel Lab calendar assistant</title>
-  <meta name="description" content="How the Pilpel Lab calendar assistant accesses and handles Google Calendar and Gmail data." />
+  <title>Privacy policy - Pilpel Lab assistant</title>
+  <meta name="description" content="How the Pilpel Lab assistant accesses and handles Google Calendar and Gmail data, and how access can be revoked." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231f6feb'/><text x='50' y='70' font-size='56' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'>P</text></svg>" />
 </head>
@@ -16,7 +16,7 @@
         <div class="brand-mark">P</div>
         <div class="brand-txt">
           <span class="brand-name">Pilpel Lab</span>
-          <span class="brand-sub">Calendar assistant</span>
+          <span class="brand-sub">Assistant</span>
         </div>
       </a>
       <div class="header-links">
@@ -32,37 +32,50 @@
   <main>
     <div class="wrap">
       <h1>Privacy policy</h1>
-      <p class="updated">Pilpel Lab calendar assistant (the "lab bot"). Last updated: 18 October 2026.</p>
+      <p class="updated">Pilpel Lab assistant (the "lab assistant"). Last updated: 18 October 2026.</p>
 
       <div class="doc">
         <h2>What this policy covers</h2>
-        <p>This policy describes how the lab bot, an internal scheduling assistant operated by the Pilpel Lab at the Weizmann Institute of Science, accesses and handles Google user data. The bot acts only on behalf of a single lab account (<code>pilpelab@gmail.com</code>) that has explicitly granted it access. It is not offered to the general public and has no other users.</p>
+        <p>This policy describes how the lab assistant, an internal tool operated by the Pilpel Lab at the Weizmann Institute of Science, accesses and handles Google user data. The assistant acts on behalf of a single lab account (<code>pilpelab@gmail.com</code>) that has explicitly granted it access. It is not offered to the general public and has no other users.</p>
 
-        <h2>Information the bot accesses</h2>
-        <p>After the account owner grants consent, the bot accesses Google data through the following OAuth scopes:</p>
+        <h2>Purpose</h2>
+        <p>The assistant supports the lab's routine operations. Its current focus is scheduling and email. It is built as a set of tools so that additional lab workflows can be added over time, and the purpose of this policy covers that general use: operating lab workflows on behalf of the lab account, and nothing else.</p>
+
+        <h2>Google data currently accessed</h2>
+        <p>The assistant accesses Google data only within the scopes the lab account has approved. Today those are:</p>
         <ul>
           <li><strong>Google Calendar</strong> (<code>calendar</code>) - read and write access to the lab's calendars, used to view and update lab meeting events.</li>
-          <li><strong>Gmail</strong> (<code>gmail.modify</code>, <code>gmail.send</code>) - access to the lab account's mailbox, used to send scheduling and notification email and to read related replies.</li>
+          <li><strong>Gmail</strong> (<code>gmail.modify</code>, <code>gmail.send</code>) - access to the lab account's mailbox, used to send and triage lab notifications and to read the replies that need a follow-up.</li>
+          <li><strong>Google Sheets</strong> - the lab's group-meeting schedule sheet, which the lab owns and uses as the source of truth for that workflow.</li>
         </ul>
-        <p>The bot also reads the lab's group-meeting schedule from a Google Sheet owned by the lab. The bot does not access data belonging to any other Google account.</p>
+        <p>The assistant does not access data belonging to any other Google account.</p>
+
+        <h2>Least privilege and new access</h2>
+        <p>The assistant never has standing access beyond what the lab account has explicitly granted. If a future capability needs a new Google permission or a new category of Google data, the lab account must consent to it explicitly, and this policy will be updated before that access is requested. Access is never expanded silently.</p>
 
         <h2>How the information is used</h2>
-        <p>Google user data is used solely to operate the lab's scheduling workflow: synchronizing group-meeting speakers and times from the lab schedule sheet into the lab calendars, and sending related notification email on the lab's behalf. The data is not used for advertising, profiling, or any purpose unrelated to lab scheduling.</p>
+        <p>Google user data is used solely to operate the lab workflows the assistant has been asked to handle: for example, synchronizing group-meeting speakers and times from the lab schedule sheet into the lab calendars, and sending related notification email on the lab's behalf. The data is not used for advertising, profiling, or any purpose unrelated to lab operations.</p>
 
         <h2>Storage and security</h2>
-        <p>OAuth credentials and cached calendar data are stored locally on machines controlled by the lab, with restricted file permissions. The bot does not upload Google user data to any third-party service, and it does not maintain a separate copy of mailbox contents.</p>
+        <p>OAuth credentials and cached data are stored locally on machines controlled by the lab, with restricted file permissions. The assistant does not upload Google user data to any third-party service, and it does not maintain a separate copy of mailbox contents.</p>
 
         <h2>Sharing</h2>
-        <p>Google user data is not sold, rented, or shared with third parties. It is not transferred to others except as required to operate the scheduling workflow within the lab, or where required by law.</p>
+        <p>Google user data is not sold, rented, or shared with third parties. It is not transferred to others except as required to operate the lab workflows within the lab, or where required by law.</p>
+
+        <h2>No use for model training</h2>
+        <p>Google user data is not used to develop, improve, or train generalized artificial intelligence or machine learning models.</p>
 
         <h2>Retention and revoking access</h2>
-        <p>Data is retained only as long as needed for the lab's scheduling operations. The account owner can revoke the bot's access at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. Once access is revoked, the bot can no longer read or act on Google data. To request deletion of stored credentials or data, contact the address below.</p>
+        <p>Data is retained only as long as needed for the lab operations described above. The account owner can revoke the assistant's access at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. Once access is revoked, the assistant can no longer read or act on Google data. To request deletion of stored credentials or data, contact the address below.</p>
 
         <h2>Google API Services User Data Policy</h2>
-        <p>The lab bot's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <p>The assistant's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>Because the assistant is designed to grow, this policy may be updated when a new capability is added. Material changes will be posted on this page with a new "last updated" date before the related access is requested.</p>
 
         <h2>Contact</h2>
-        <p>Questions about this policy or about data handled by the bot can be sent to <a href="mailto:pilpelab@gmail.com">pilpelab@gmail.com</a>.</p>
+        <p>Questions about this policy or about data handled by the assistant can be sent to <a href="mailto:pilpelab@gmail.com">pilpelab@gmail.com</a>.</p>
       </div>
     </div>
   </main>

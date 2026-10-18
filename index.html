@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pilpel Lab calendar assistant</title>
-  <meta name="description" content="The Pilpel Lab calendar assistant keeps the lab's group-meeting calendar in sync with the lab schedule and sends the related notifications." />
+  <title>Pilpel Lab assistant</title>
+  <meta name="description" content="An internal assistant for the Pilpel Lab. It handles scheduling, email, and other routine lab operations, and is built as a set of tools so it can take on more over time." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231f6feb'/><text x='50' y='70' font-size='56' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'>P</text></svg>" />
 </head>
@@ -16,7 +16,7 @@
         <div class="brand-mark">P</div>
         <div class="brand-txt">
           <span class="brand-name">Pilpel Lab</span>
-          <span class="brand-sub">Calendar assistant</span>
+          <span class="brand-sub">Assistant</span>
         </div>
       </a>
       <div class="header-links">
@@ -32,32 +32,39 @@
   <main>
     <div class="wrap">
       <span class="eyebrow">Weizmann Institute of Science</span>
-      <h1>Lab calendar assistant</h1>
-      <p class="lead">An internal assistant for the Pilpel Lab. It keeps the lab's group-meeting calendar in sync with the lab schedule sheet, and sends the related notification email on the lab's behalf.</p>
+      <h1>Pilpel Lab assistant</h1>
+      <p class="lead">One internal assistant for the lab's day-to-day operations. It handles scheduling and email today, and is built as a set of tools so it can take on more of the lab's routine work over time, without turning into a pile of one-off scripts.</p>
 
       <div class="grid">
         <div class="card">
-          <h3>Reads the schedule</h3>
-          <p>Reads the group-meeting schedule from the lab's Google Sheet, which stays the source of truth.</p>
+          <h3>Scheduling</h3>
+          <p>Keeps the lab's group-meeting calendar in sync with the lab schedule sheet, including speaker names and time overrides.</p>
         </div>
         <div class="card">
-          <h3>Updates the calendar</h3>
-          <p>Applies speaker names and any time overrides to the matching events on the lab calendars.</p>
+          <h3>Email</h3>
+          <p>Sends and triages lab notifications from the lab account, and reads the replies that need a follow-up.</p>
         </div>
         <div class="card">
-          <h3>Sends notifications</h3>
-          <p>Sends scheduling and reminder email from the lab account when a change needs to go out.</p>
+          <h3>Built to grow</h3>
+          <p>Each capability is a separate tool behind the same assistant. New lab workflows are added as tools, not as new integrations bolted on.</p>
         </div>
+      </div>
+
+      <h2 class="section-title">How it is built</h2>
+      <div class="doc">
+        <h2>One assistant, many tools</h2>
+        <p>The assistant is a single agent with a growing set of tools. Today those tools cover the lab calendar and the lab mailbox. Future tools are expected to cover other routine operations the lab chooses to delegate, such as compute jobs, meeting notes, reminders, and data lookups.</p>
+
+        <h2>Least privilege</h2>
+        <p>The assistant acts only on the single lab account that granted it access, and only within the scopes that account approved. It does not have standing access to anything the lab has not explicitly granted, and it never reaches into other people's accounts.</p>
+
+        <h2>Explicit consent for new access</h2>
+        <p>Adding a capability that needs a new Google permission means a new consent step by the lab account. Access is never expanded silently. The <a href="privacy.html">privacy policy</a> is updated before any new category of Google data is requested.</p>
       </div>
 
       <div class="note">
-        This is a private, single-account tool. It has no public sign-up, and it acts only on the lab Google account that granted it access. It is not offered as a service to anyone else.
+        This is a private, single-account tool for one lab. It has no public sign-up and is not offered as a service to anyone else.
       </div>
-
-      <h2 class="section-title">Access and data</h2>
-      <p class="lead" style="font-size:16px;margin-top:10px">
-        The assistant uses Google Calendar and Gmail access granted by the lab account. What it reads, how it is stored, and how to revoke access are described in the <a href="privacy.html">privacy policy</a>.
-      </p>
     </div>
   </main>
 
